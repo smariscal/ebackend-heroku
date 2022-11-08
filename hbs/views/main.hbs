@@ -1,0 +1,27 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <h4 class="navbar-brand" href="#">Bienvenido  <span id="user"></span></h4>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">      
+        <form class="d-flex mt-3 mt-lg-0" role="submit">
+          <a href="/logout" class="btn btn-outline-success">Salir</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div style="display: none;">
+    {{> formProducts}}
+  </div>
+  <h1>Productos</h1>
+  <div class="bg-dark bg-gradient p-2" id="products"></div>
+</div>
+<h1>Mensajes</h1>
+<h2 id="compresion"></h2>
+<div class="d-flex">  
+  {{> formMessages}}
+  <div class="bg-dark bg-gradient col-8" id="msg"></div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/normalizr.js"></script>

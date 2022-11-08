@@ -1,0 +1,34 @@
+<div class="col-4">
+  <div class="mb-3">
+    <label class="form-label" for="messageid">Email</label>
+    <input class="form-control" type="email" id="messageid" name="messageid" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messagename">Nombre</label>
+    <input class="form-control" type="text" id="messagename" name="messagename" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messagelastname">Apellido</label>
+    <input class="form-control" type="text" id="messagelastname" name="messagelastname" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messageage">Edad</label>
+    <input class="form-control" type="number" id="messageage" name="messageage" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messageusername">Usuario</label>
+    <input class="form-control" type="text" id="messageusername" name="messageusername" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messageavatar">Avatar</label>
+    <input class="form-control" type="url" id="messageavatar" name="messageavatar" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="messagetext">Mensaje</label>
+    <textarea class="form-control" type="text" id="messagetext" name="messagetext" required></textarea>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+    <button class="btn btn-danger" onclick="clearFields()">Borrar</button>
+  </div>
+</div>
