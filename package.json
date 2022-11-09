@@ -37,8 +37,5 @@
     "passport-local": "^1.0.0",
     "socket.io": "^4.5.1",
     "winston": "^3.8.2"
-  },
-  "devDependencies": {
-    "faker": "^5.5.3"
   }
 }
