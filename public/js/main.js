@@ -5,10 +5,10 @@ socket.on("connect", () => {
 });
 
 socket.on("products", async() => {
-  const data = await fetch(`http://localhost:${process.env.PORT}/api/products-test`);
+  const data = await fetch(`https://backend-smariscal.herokuapp.com/api/products-test`);
   const productos = await data.json();
 
-  fetch(`http://localhost:${process.env.PORT}/products.hbs`)
+  fetch(`https://backend-smariscal.herokuapp.com/products.hbs`)
     .then((res) => res.text())
     .then((text) => {
       const template = Handlebars.compile(text);
