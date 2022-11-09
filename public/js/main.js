@@ -5,10 +5,10 @@ socket.on("connect", () => {
 });
 
 socket.on("products", async() => {
-  const data = await fetch('http://localhost:3000/api/products-test');
+  const data = await fetch(`http://localhost:${process.env.PORT}/api/products-test`);
   const productos = await data.json();
 
-  fetch("http://localhost:3000/products.hbs")
+  fetch(`http://localhost:${process.env.PORT}/products.hbs`)
     .then((res) => res.text())
     .then((text) => {
       const template = Handlebars.compile(text);

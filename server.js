@@ -159,8 +159,8 @@ app.get('/*', (req, res) => {
 })
 
 // listen server
-const listen = server.listen(process.env.PORT, ()=> {
-  logger.log('info', `Servidor en puerto: ${process.env.PORT}`)
+const listen = server.listen(process.env.PORT || port.p, ()=> {
+  logger.log('info', `Servidor en puerto: ${process.env.PORT || port.p}`)
 });
 
 listen.on("Error", (error) => logger.log('error', err));
