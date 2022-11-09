@@ -4,8 +4,8 @@ const generateProducts = async(req, res) =>{
     for (let i=0; i<5;i++){
       let producto={
           id:i+1,
-          productname:i,
-          productprice:i*100,
+          productname:i+1,
+          productprice:(i+1)*100,
           productthumbnail:"https://picsum.photos/100"
       }
       prods.push(producto);

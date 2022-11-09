@@ -65,6 +65,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// uses
+app.use("/api/products-test", routerProductsTest);
+app.use("/api/users", routerUsers);
+app.use('/api', routeRandom) 
+
 // connect mongoDB
 connectToMongoDB()
   .then(() => logger.log('info', 'conectado correctamente con mongoDB'))
@@ -164,8 +169,3 @@ const listen = server.listen(process.env.PORT || port.p, ()=> {
 });
 
 listen.on("Error", (error) => logger.log('error', err));
-
-// uses
-app.use("/api/products-test", routerProductsTest);
-app.use("/api/users", routerUsers);
-app.use('/api', routeRandom) 
